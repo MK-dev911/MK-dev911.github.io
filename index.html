@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Mahdieh Karizi — Computer Engineering & Full-Stack Developer Portfolio
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER / NAVIGATION -->
+    <header id="main-header">
+      <a href="#home-space" class="header-logo">
+        <span class="sparkle">✦</span> Mahdieh Karizi
+      </a>
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="site-nav">
+        <ul class="nav-menu">
+          <li><a href="#home-space" class="nav-link">Home</a></li>
+          <li><a href="#scroll-spacer" class="nav-link">Projects</a></li>
+          <li><a href="#about-section" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li>
+            <button class="nav-link resume-btn" id="open-resume-btn">
+              Resume
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 1. GALAXY HOME SECTION -->
+    <section id="home-space">
+      <div id="galaxy-stars-container"></div>
+
+      <div class="planet planet-1"></div>
+      <div class="planet planet-2"></div>
+
+      <!-- BOUNDS-CONTROLLED SPACESHIP -->
+      <div id="spaceship-wrapper" class="space-float">
+        <svg class="ship-body" viewBox="0 0 200 120" fill="none">
+          <ellipse
+            cx="100"
+            cy="98"
+            rx="58"
+            ry="14"
+            fill="#06b6d4"
+            opacity="0.45"
+            filter="blur(6px)"
+          />
+          <ellipse
+            cx="100"
+            cy="72"
+            rx="88"
+            ry="26"
+            fill="#2d124d"
+            stroke="#c79bef"
+            stroke-width="3"
+          />
+          <ellipse cx="100" cy="66" rx="94" ry="18" fill="#4c1d95" />
+          <circle cx="35" cy="70" r="5.5" fill="#ffe07a" />
+          <circle cx="65" cy="76" r="5.5" fill="#06b6d4" />
+          <circle cx="100" cy="78" r="6.5" fill="#ec4899" />
+          <circle cx="135" cy="76" r="5.5" fill="#06b6d4" />
+          <circle cx="165" cy="70" r="5.5" fill="#ffe07a" />
+          <g id="ufo-dome">
+            <path
+              d="M 52 64 C 52 22, 148 22, 148 64 Z"
+              fill="#38bdf8"
+              opacity="0.6"
+              stroke="#a5f3fc"
+              stroke-width="2.5"
+            />
+            <path
+              d="M 72 40 Q 100 30 128 42"
+              stroke="#ffffff"
+              stroke-width="3.5"
+              stroke-linecap="round"
+              opacity="0.75"
+            />
+          </g>
+        </svg>
+      </div>
+
+      <div class="home-container">
+        <div class="home-intro-content">
+          <div class="status-badge">
+            <span class="status-dot"></span> Final-Year B.Sc. Computer
+            Engineering Student
+          </div>
+
+          <h1>Hi, I'm <span class="highlight">Mahdieh Karizi</span></h1>
+
+          <div class="home-tagline">
+            Full-Stack Developer · Machine Learning Enthusiast
+          </div>
+
+          <p class="home-desc">
+            I build polished full-stack web experiences and explore machine
+            learning, HCI, and interactive digital products.
+          </p>
+
+          <div class="home-actions">
+            <a href="#scroll-spacer" class="btn-primary">Explore My Projects</a>
+            <a href="#contact" class="btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+
+        <div class="home-image-wrapper">
+          <div class="portal-ring-1"></div>
+          <div class="portal-ring-2"></div>
+
+          <div class="photo-badge-top">✦ Computer Engineer</div>
+          <div class="photo-badge-bottom">
+            <i data-lucide="rocket"></i>
+            <span>Full Stack & ML</span>
+          </div>
+
+          <div class="photo-frame" title="Mahdieh Karizi">
+            <img
+              id="user-photo"
+              src="img/profile pink.jpg"
+              alt="Developer Photo"
+            />
+
+            <div class="photo-placeholder-content">
+              <div class="photo-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <span class="photo-label">Picture</span>
+              <span class="photo-sublabel">Cosmic Glass Portal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SCROLL-DRIVEN FOREST SCENE (PROJECTS) -->
+    <div id="scroll-spacer">
+      <div id="stage">
+        <div id="hero-copy">
+          <h1>Interactive Projects</h1>
+          <p>
+            Scroll through the grove to explore selected projects and
+            engineering experiments
+          </p>
+        </div>
+
+        <div class="layer" id="layer-sky"></div>
+        <div class="layer" id="layer-back"></div>
+
+        <div class="layer" id="layer-mid">
+          <div id="parked-ufo-land" class="parked-ufo" style="display: none">
+            <svg class="ship-body" viewBox="0 0 200 120" fill="none">
+              <ellipse
+                cx="100"
+                cy="98"
+                rx="58"
+                ry="14"
+                fill="#06b6d4"
+                opacity="0.25"
+              />
+              <ellipse
+                cx="100"
+                cy="72"
+                rx="88"
+                ry="26"
+                fill="#2d124d"
+                stroke="#c79bef"
+                stroke-width="3"
+              />
+              <ellipse cx="100" cy="66" rx="94" ry="18" fill="#4c1d95" />
+              <circle cx="35" cy="70" r="5.5" fill="#ffe07a" />
+              <circle cx="65" cy="76" r="5.5" fill="#06b6d4" />
+              <circle cx="100" cy="78" r="6.5" fill="#ec4899" />
+              <circle cx="135" cy="76" r="5.5" fill="#06b6d4" />
+              <circle cx="165" cy="70" r="5.5" fill="#ffe07a" />
+              <g
+                id="parked-ufo-dome"
+                transform="rotate(-75, 100, 65) translate(-10, -10)"
+              >
+                <path
+                  d="M 52 64 C 52 22, 148 22, 148 64 Z"
+                  fill="#38bdf8"
+                  opacity="0.6"
+                  stroke="#a5f3fc"
+                  stroke-width="2.5"
+                />
+                <path
+                  d="M 72 40 Q 100 30 128 42"
+                  stroke="#ffffff"
+                  stroke-width="3.5"
+                  stroke-linecap="round"
+                  opacity="0.75"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="layer" id="layer-front">
+          <div class="path-strip"></div>
+        </div>
+
+        <!-- CHARACTER SVG WITH SLIMMER ARMS -->
+        <div id="character">
+          <svg
+            viewBox="0 0 160 220"
+            width="160"
+            height="220"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <filter
+                id="softShadow"
+                x="-10%"
+                y="-10%"
+                width="120%"
+                height="120%"
+              >
+                <feDropShadow
+                  dx="0"
+                  dy="2"
+                  stdDeviation="2"
+                  flood-color="#000"
+                  flood-opacity="0.15"
+                />
+              </filter>
+            </defs>
+
+            <g id="char-inner-group">
+              <!-- Ground Shadow -->
+              <ellipse
+                cx="80"
+                cy="210"
+                rx="35"
+                ry="6"
+                fill="rgba(0,0,0,0.2)"
+                class="char-shadow"
+              />
+
+              <!-- BACK ARM (SLIM & BALANCED) -->
+              <g class="arm arm-back arm-left">
+                <path
+                  d="M 68 118 Q 54 132 58 152 Q 66 154 72 132 Z"
+                  fill="#FFDFC4"
+                />
+              </g>
+
+              <!-- HAIR (Back Layer) -->
+              <path
+                d="M 35 75 Q 15 100 25 125 Q 40 140 60 130 Q 30 110 45 80 Z"
+                fill="#B39DDB"
+              />
+              <path
+                d="M 125 75 Q 145 100 135 125 Q 120 140 100 130 Q 130 110 115 80 Z"
+                fill="#B39DDB"
+              />
+
+              <!-- BACK LEG -->
+              <g class="leg leg-back">
+                <path
+                  d="M 66 148 L 64 182 L 76 182 L 78 148 Z"
+                  fill="#FFE0BD"
+                />
+                <path
+                  d="M 70 180 Q 63 180 60 192 Q 58 202 78 202 Q 88 202 88 190 Q 88 180 70 180 Z"
+                  fill="#D32F2F"
+                />
+                <ellipse cx="73" cy="182" rx="9" ry="4" fill="#B71C1C" />
+              </g>
+
+              <!-- FRONT LEG -->
+              <g class="leg leg-front">
+                <path
+                  d="M 82 148 L 80 182 L 92 182 L 94 148 Z"
+                  fill="#FFE0BD"
+                />
+                <path
+                  d="M 86 180 Q 79 180 76 192 Q 74 202 94 202 Q 104 202 104 190 Q 104 180 86 180 Z"
+                  fill="#E53935"
+                />
+                <ellipse cx="89" cy="182" rx="9" ry="4" fill="#C62828" />
+              </g>
+
+              <!-- HEAD & FACE -->
+              <g class="head-group">
+                <ellipse cx="80" cy="85" rx="34" ry="28" fill="#FFE0BD" />
+
+                <ellipse cx="75" cy="82" rx="6" ry="9" fill="#00838F" />
+                <ellipse cx="76" cy="80" rx="2.5" ry="4" fill="#FFFFFF" />
+                <circle cx="73" cy="85" r="1.5" fill="#FFFFFF" />
+
+                <ellipse cx="95" cy="82" rx="6" ry="9" fill="#00838F" />
+                <ellipse cx="96" cy="80" rx="2.5" ry="4" fill="#FFFFFF" />
+                <circle cx="93" cy="85" r="1.5" fill="#FFFFFF" />
+
+                <path
+                  d="M 70 70 Q 75 67 81 70"
+                  stroke="#5D4037"
+                  stroke-width="2"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M 90 70 Q 95 67 101 70"
+                  stroke="#5D4037"
+                  stroke-width="2"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+
+                <ellipse
+                  cx="68"
+                  cy="90"
+                  rx="5"
+                  ry="3"
+                  fill="#FF8A80"
+                  opacity="0.6"
+                />
+                <ellipse
+                  cx="102"
+                  cy="90"
+                  rx="5"
+                  ry="3"
+                  fill="#FF8A80"
+                  opacity="0.6"
+                />
+
+                <circle cx="85" cy="87" r="1" fill="#D7CCC8" />
+                <path
+                  d="M 82 93 Q 86 97 90 93"
+                  stroke="#D32F2F"
+                  stroke-width="2"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M 48 72 Q 60 55 80 65 Q 100 55 112 72 Q 100 82 80 72 Q 60 82 48 72 Z"
+                  fill="#C5CAE9"
+                />
+                <path
+                  d="M 45 75 Q 35 95 48 115 Q 60 118 55 95 Z"
+                  fill="#B39DDB"
+                />
+                <path
+                  d="M 115 75 Q 125 95 112 115 Q 100 118 105 95 Z"
+                  fill="#B39DDB"
+                />
+
+                <g class="hat">
+                  <path
+                    d="M 42 68 Q 80 52 118 68 Q 118 58 80 48 Q 42 58 42 68 Z"
+                    fill="#FFFFFF"
+                    filter="url(#softShadow)"
+                  />
+                  <ellipse cx="80" cy="62" rx="38" ry="8" fill="#F5F5F5" />
+                  <path
+                    d="M 44 60 Q 58 25 80 10 Q 102 25 116 60 Q 80 50 44 60 Z"
+                    fill="#E53935"
+                  />
+                  <circle cx="80" cy="10" r="7.5" fill="#FFFFFF" />
+                  <circle
+                    cx="78.5"
+                    cy="8.5"
+                    r="2"
+                    fill="#FFF8E1"
+                    opacity="0.8"
+                  />
+                </g>
+              </g>
+
+              <!-- TORSO & DRESS -->
+              <g class="torso-group">
+                <path
+                  d="M 65 148 Q 72 156 80 150 Q 88 156 95 148 Q 90 156 80 156 Q 70 156 65 148 Z"
+                  fill="#FFFFFF"
+                />
+                <path
+                  d="M 62 115 Q 80 110 98 115 L 108 152 Q 80 160 52 152 Z"
+                  fill="#FDD835"
+                />
+                <path
+                  d="M 65 115 Q 80 124 95 115 Q 88 108 80 110 Q 72 108 65 115 Z"
+                  fill="#FFFFFF"
+                />
+              </g>
+
+              <!-- FRONT ARM (SLIM & BALANCED) -->
+              <g class="arm arm-front arm-right">
+                <path
+                  d="M 88 118 Q 100 132 96 152 Q 88 154 82 132 Z"
+                  fill="#FFE0BD"
+                />
+              </g>
+            </g>
+          </svg>
+        </div>
+
+        <div id="scroll-hint">
+          <span>scroll to wander</span>
+          <span class="arrow"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT MODAL -->
+    <div id="modal-overlay">
+      <div id="modal-card">
+        <button id="modal-close" aria-label="Close">✕</button>
+        <span id="modal-tag">Project</span>
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+        <div id="modal-stack"></div>
+        <a id="modal-link" href="#" target="_blank" rel="noopener"
+          >Visit project ↗</a
+        >
+      </div>
+    </div>
+
+    <!-- 3. ABOUT SECTION -->
+    <section class="page-section" id="about-section">
+      <div class="inner">
+        <div class="about-header-wrapper">
+          <!-- MAGICAL MULTI-LAYER OPEN TULIP FLOWER -->
+          <div class="tulip-flower-container" id="tulip-flower">
+            <!-- BACK TULIP LAYER -->
+            <svg viewBox="0 0 140 140" class="tulip-svg tulip-back-layer">
+              <defs>
+                <linearGradient
+                  id="petalGrad1"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stop-color="#ff75c3" />
+                  <stop offset="100%" stop-color="#9a4bfa" />
+                </linearGradient>
+                <filter
+                  id="tulipGlow"
+                  x="-20%"
+                  y="-20%"
+                  width="140%"
+                  height="140%"
+                >
+                  <feDropShadow
+                    dx="0"
+                    dy="0"
+                    stdDeviation="6"
+                    flood-color="#f472b6"
+                    flood-opacity="0.6"
+                  />
+                </filter>
+              </defs>
+
+              <path
+                d="M 70 135 Q 70 100 70 85"
+                stroke="#4f8a5b"
+                stroke-width="7"
+                stroke-linecap="round"
+                fill="none"
+              />
+              <path
+                d="M 70 115 Q 40 100 25 110 Q 50 125 70 118"
+                fill="#2e5a3a"
+              />
+              <path
+                d="M 70 112 Q 100 98 115 108 Q 90 122 70 115"
+                fill="#2e5a3a"
+              />
+
+              <path
+                d="M 70 88 C 15 75 0 30 25 10 C 48 35 65 68 70 88 Z"
+                fill="url(#petalGrad1)"
+                filter="url(#tulipGlow)"
+              />
+              <path
+                d="M 70 88 C 125 75 140 30 115 10 C 92 35 75 68 70 88 Z"
+                fill="url(#petalGrad1)"
+                filter="url(#tulipGlow)"
+              />
+            </svg>
+
+            <!-- DOCKED LANDING SLOT FOR CHARACTER -->
+            <div id="flower-target"></div>
+
+            <!-- FRONT TULIP LAYER -->
+            <svg viewBox="0 0 140 140" class="tulip-svg tulip-front-layer">
+              <defs>
+                <linearGradient
+                  id="petalGrad2"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stop-color="#f472b6" />
+                  <stop offset="100%" stop-color="#ec4899" />
+                </linearGradient>
+              </defs>
+
+              <path
+                d="M 70 90 C 30 88 20 52 44 38 C 58 58 65 80 70 90 Z"
+                fill="url(#petalGrad2)"
+              />
+              <path
+                d="M 70 90 C 110 88 120 52 96 38 C 82 58 75 80 70 90 Z"
+                fill="url(#petalGrad2)"
+              />
+              <path
+                d="M 70 92 C 42 92 38 65 70 48 C 102 65 98 92 70 92 Z"
+                fill="#ec4899"
+                opacity="0.95"
+              />
+            </svg>
+          </div>
+
+          <h2>About Me</h2>
+        </div>
+
+        <p class="about-bio">
+          I am a final-year <strong>Computer Engineering</strong> student
+          focused on full-stack development, machine learning, HCI, and
+          thoughtful digital experiences. I enjoy turning technical ideas into
+          useful, polished products.
+        </p>
+
+        <div class="academic-grid">
+          <div class="skills-category">
+            <h3>
+              <span class="cat-icon">
+                <i data-lucide="laptop"></i>
+              </span>
+              Skills & Technologies
+            </h3>
+            <div class="skills-row">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              <span>React JS</span><span>Tailwind CSS</span><span>Python</span>
+              <span>C</span><span>C++</span><span>C#</span> <span>SQL</span
+              ><span>Git & GitHub</span><span>VSCode</span><span>GitHub</span>
+              <span>Figma</span><span>SQL Server</span
+              ><span>Rational Rose</span> <span>Proteus</span
+              ><span>Arduino</span><span>Jira</span><span>Trello</span>
+              <span>Office apps</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h3>
+              <span class="cat-icon">
+                <i data-lucide="graduation-cap"></i>
+              </span>
+              Computer Engineering Courses
+            </h3>
+            <div class="skills-row">
+              <span>Data Structures & Algorithms</span>
+              <span>Database Systems</span>
+              <span>Software Engineering</span>
+              <span>Operating Systems</span>
+              <span>Computer Networks</span>
+              <span>Computer Architecture</span>
+              <span class="ml-skill">Machine Learning & Data Processing</span>
+              <span class="uml-skill">UML Design</span>
+              <span>Microprocessors & Embedded Systems</span>
+              <span>HCI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CONTACT SECTION -->
+    <section class="page-section" id="contact">
+      <div class="inner">
+        <h2>Let's Build Something Extraordinary</h2>
+        <p class="contact-sub">
+          Open to software engineering opportunities, front-end roles, and
+          research collaborations.
+        </p>
+
+        <div class="contact-cards">
+          <a
+            href="https://github.com/MK-dev911"
+            target="_blank"
+            rel="noopener"
+            class="contact-card"
+          >
+            <div class="card-icon">
+              <svg
+                width="22"
+                height="22"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+            </div>
+            <div class="card-info">
+              <span class="card-title">GitHub</span>
+              <span class="card-val">github.com/MK-dev911</span>
+            </div>
+          </a>
+
+          <a
+            href="www.linkedin.com/in/mahdieh-karizi"
+            target="_blank"
+            rel="noopener"
+            class="contact-card"
+          >
+            <div class="card-icon">
+              <svg
+                width="22"
+                height="22"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                />
+              </svg>
+            </div>
+            <div class="card-info">
+              <span class="card-title">LinkedIn</span>
+              <span class="card-val">linkedin.com/in/mahdieh-karizi</span>
+            </div>
+          </a>
+
+          <a
+            href="https://t.me/CE_MK_Dev"
+            target="_blank"
+            rel="noopener"
+            class="contact-card"
+          >
+            <div class="card-icon">
+              <svg
+                width="22"
+                height="22"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.008-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.141.119.098.152.228.166.319.016.104.013.253 0 .385z"
+                />
+              </svg>
+            </div>
+            <div class="card-info">
+              <span class="card-title">Telegram</span>
+              <span class="card-val">t.me/CE_MK_Dev</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. RESUME MODAL -->
+    <div id="resume-modal" class="modal-overlay">
+      <div id="resume-card" class="modal-card-custom">
+        <button id="resume-close" class="modal-close-btn" aria-label="Close">
+          ✕
+        </button>
+        <div class="resume-modal-header">
+          <span class="modal-tag-badge">
+            <i data-lucide="file-text"></i>
+            Academic & Engineering CV
+          </span>
+          <h3>Mahdieh Karizi — Resume</h3>
+          <p>
+            Computer Engineering undergraduate candidate. View directly in
+            browser or download the PDF.
+          </p>
+        </div>
+
+        <div class="resume-preview-container">
+          <div class="resume-placeholder-box">
+            <svg
+              width="48"
+              height="48"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+              ></path>
+            </svg>
+            <span>Resume Document (PDF)</span>
+          </div>
+        </div>
+
+        <div class="resume-modal-actions">
+          <a
+            href="documents/Mahdieh Karizi-Resume.pdf"
+            target="_blank"
+            rel="noopener"
+            class="btn-primary"
+            >View Full PDF ↗</a
+          >
+          <a
+            href="documents/Mahdieh Karizi-Resume.pdf"
+            download="Mahdieh_Karizi_Resume.pdf"
+            class="btn-secondary"
+            ><i data-lucide="download"></i> <span>Download PDF</span></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          Handcrafted with care · © 2026 Elira Wren · B.Sc. Computer Engineering
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
