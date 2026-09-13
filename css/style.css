@@ -1870,17 +1870,6 @@ footer {
   }
 }
 
-@media (max-width: 680px) {
-  .status-badge {
-    display: none !important;
-  }
-
-  .home-intro-content h1 {
-    font-size: clamp(2rem, 8vw, 2.6rem);
-    margin: 40px 0 10px;
-  }
-}
-
 @media (max-width:430px){
   #home-space{
     padding-top:118px;
@@ -1921,5 +1910,17 @@ footer {
 
   .contact-card .card-val{
     font-size:.78rem;
+  }
+}
+
+
+@media (max-width: 680px) {
+  .status-badge {
+    display: none !important;
+  }
+
+  .home-intro-content h1 {
+    font-size: 2rem !important;
+    margin: 20px 0 10px 0 !important;
   }
 }
